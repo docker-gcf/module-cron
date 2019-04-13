@@ -7,4 +7,5 @@ mts()
     ts "${strftime_format}"
 }
 
-cron -f -L 15 -n |& mts
+
+echo "Client is up" |& mts

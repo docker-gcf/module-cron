@@ -1,0 +1,13 @@
+version: '3.7'
+
+x-common: &common
+#  restart: unless-stopped
+  env_file:
+    - env
+  environment:
+    - "GCF_DEBUG_SHOW_MODEL_JSON=1"
+
+services:
+  cron:
+    << : *common
+    build: cron
