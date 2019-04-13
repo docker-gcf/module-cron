@@ -1,11 +1,3 @@
 #! /bin/sh
 
-strftime_format="$(cat /tmp/gcf-model.json | jq -r .gcf.logs.ts.strftime)"
-
-mts()
-{
-    ts "${strftime_format}"
-}
-
-
-echo "Client is up" |& mts
+echo "Some cron task output relayed by ssmtp"
