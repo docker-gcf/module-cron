@@ -1,0 +1,10 @@
+#! /bin/sh
+
+strftime_format="$(cat /tmp/gcf-model.json | jq -r .gcf.logs.ts.strftime)"
+
+mts()
+{
+    ts "${strftime_format}"
+}
+
+cron -f -L 15 -n | mts
