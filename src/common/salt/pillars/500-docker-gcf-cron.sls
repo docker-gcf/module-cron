@@ -3,4 +3,4 @@ gcf:
     programs:
       cron:
         extraConfig:
-          command: cron -n -L 0 -f
+          command: cron -n -L 4 -f
